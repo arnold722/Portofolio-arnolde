@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #081B29;
+    color: aliceblue;
+}
+p::selection{
+    color: #00101d;
+    background-color: #00abf0;
+}
+a::selection{
+    color: #00101d;
+    background-color: #00abf0;
+}
+h1::selection,h1::selection,h3::selection{
+    color: #00101d;
+    background-color: #00abf0;
+}
+
+.header{
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 10% ;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    padding: 80px;
+
+}
+.home-all{
+    display: flex;
+    justify-content: space-around;
+}
+.home-input {
+    margin-right: 10px;
+    padding: 20px;
+    width: 50%;
+    height: 60vh;
+    background: #081B29;
+    transition: .3s;
+    box-shadow: 0px 0px 10px 1px #00101d;   
+}
+.home-input:hover{
+    box-shadow: 0px 0px 10px 3px #00101d;
+}
+.home-input input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid #ffffff;
+}
+.home-input ::placeholder{
+    color: #5e5e5e;
+    margin-left: 0;
+}
+.msg ::placeholder{
+    
+}
+
+.home-text{
+    margin-left: 10px;
+    padding: 20px;
+    padding-top: 60px;
+    background: none;
+    width: 50%;
+    height: 60vh;
+}
+.home-text h2{
+    font-size: 45px;
+}
+.home-text p{
+    font-size: 17px;
+}
+
+.home .btn-box{
+    max-width: 345px;
+    height: 40px;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+    height: 100%;
+    padding: 5px;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+.btn-box a:nth-child(2):hover {
+    background: transparent;
+    color: #081b29;
+}
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+.btn-box a:hover{
+    color: #00abf0;
+}
+
+footer{
+    background: #06131d;
+    width: 100%;
+    height: 200px;
+    padding: 0 0 0px 50px;
+}
+
+.menu2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.menu2 h2{
+    margin-bottom: 5px;
+}
+
+.menu2 .menue{
+    width: 30%;
+}
+
+.hking{
+    margin-top: 20px;
+}
+.menue input{
+  background: none;
+  outline: none;
+  border: 1px solid #00638a;
+  width: 55%;
+  height: 40px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 15px 0 0 15px;
+}
+
+
+.menue input::placeholder{
+    padding: 5px;
+    color: rgb(129, 129, 129);
+}
+
+.menue label{
+    color: #06131d;
+  background: #00abf0;
+  outline: none;
+  border: 1px solid #00abf0;
+  width: 20px;
+  height: 30px;
+  margin-top: 10px;
+  padding: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+}
+
+.navbar2{
+    text-align: center;
+}
+
+.navbar2 a{
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.navbar2 a:hover{
+    color: #00abf0;
+}
+
+.Copy{
+    background: #081B29;
+    width: 100%;
+    height: 50px;
+    color: rgb(145, 145, 145);
+    text-align: center;
+    place-content: center;
+}
+
+@media screen and (max-width:800px) {
+    .header{
+      display: block;
+      width: 100%;
+      padding: 10px 10px ;
+      background: transparent;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+}
+.mon-logo{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.menu-navbar{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 11px;
+    place-content: center;
+    text-align: center;
+}
+
+.menu2{
+    display: inline;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+}
+.menu2 .menue{
+    width: 100%;
+    margin-bottom: 20px;
+}
+footer{
+    background: #06131d;
+    width: 100%;
+    height: 400px;
+    padding: 0 0 0px 50px;
+}
+.navbar2{
+    text-align: center;
+    margin-left:0;
+}
+
+.navbar2 a{
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: .5s;
+    text-align: center;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+}
+}
+
+
+@media screen and (max-width:710px) {
+    .header{
+      display: block;
+      width: 100%;
+      padding: 5px 5px ;
+      background: transparent;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+}
+.mon-logo{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.menu-navbar{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 10px;
+    place-content: center;
+    text-align: center;
+}
+.navbar a{
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.menu2 p{
+    font-size: 13px;
+    margin-right: 20px;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    padding: 80px;
+
+}
+.home-all{
+    display: inline;
+}
+.home-input {
+    padding: 20px;
+    width: 100%;
+    height: 40vh;
+
+}
+.home-text{
+    padding: 20px;
+    padding-top: 60px;
+    background: none;
+    width: 100%;
+    height: 40vh;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+}
+
+}
+@media screen and (max-width:430px) {
+    .header{
+      display: block;
+      width: 100%;
+      padding: 5px 5px ;
+      background: transparent;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+}
+.mon-logo{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.menu-navbar{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 10px;
+    place-content: center;
+    text-align: center;
+}
+.navbar a{
+    font-size: 15px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+}
+}
+
+

@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #081B29;
+    color: aliceblue;
+}
+p::selection{
+    color: #00101d;
+    background-color: #00abf0;
+}
+a::selection{
+    color: #00101d;
+    background-color: #00abf0;
+}
+h1::selection,h1::selection,h3::selection{
+    color: #00101d;
+    background-color: #00abf0;
+}
+
+.header {
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 10% ;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+}
+
+.hero{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.background-band{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    background: #d6cfc2;
+}
+.hero-content{
+    position: relative;
+    text-align: center;
+    max-width: 500px;
+    z-index: 2;
+}
+.profile-image img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.hero-content h1{
+    margin: 10px 0;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+.hero-content h1 span {
+    display: block;
+    font-size: 18px;
+    color: #444;
+}
+.hero-content h1 strong{
+    font-size: 22px;
+    color: #06131d;
+}
+.hero-content p{
+    font-size: 13px;
+    color: #c4c4c4;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(139, 139, 139);
+    text-decoration: none;
+    border-bottom: 2px solid rgb(172, 172, 172);
+    padding-bottom: 3px;
+}
+
+.btn:hover{
+    color: white;
+}
+.side-button{
+    position: absolute;
+    right: 40px;
+    top: 280px;
+
+    width: 55px;
+    height: 50px;
+
+    background: #0b3c66;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:768px) {
+    .profile-image img{
+        width: 120px;
+        height: 120px;
+    }
+    .side-button{
+        right: 15px;
+    }
+    .hero-content{
+        padding: 0 15px;
+    }
+}
+
+
+
+footer{
+    background: #06131d;
+    width: 100%;
+    height: 200px;
+    padding: 0 0 0px 50px;
+}
+
+.menu2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.menu2 h2{
+    margin-bottom: 5px;
+}
+
+.menu2 .menue{
+    width: 30%;
+}
+
+.hking{
+    margin-top: 20px;
+}
+.menue input{
+  background: none;
+  outline: none;
+  border: 1px solid #00638a;
+  width: 55%;
+  height: 40px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 15px 0 0 15px;
+}
+
+
+.menue input::placeholder{
+    padding: 5px;
+    color: rgb(129, 129, 129);
+}
+
+.menue label{
+    color: #06131d;
+  background: #00abf0;
+  outline: none;
+  border: 1px solid #00abf0;
+  width: 20px;
+  height: 30px;
+  margin-top: 10px;
+  padding: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+}
+
+.navbar2{
+    text-align: center;
+}
+
+.navbar2 a{
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.navbar2 a:hover{
+    color: #00abf0;
+}
+
+.Copy{
+    background: #081B29;
+    width: 100%;
+    height: 50px;
+    color: rgb(145, 145, 145);
+    text-align: center;
+    place-content: center;
+}
+
+@media screen and (max-width:800px) {
+    .header{
+      display: block;
+      width: 100%;
+      padding: 10px 10px ;
+      background: transparent;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+}
+.mon-logo{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.menu-navbar{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 11px;
+    place-content: center;
+    text-align: center;
+}
+
+.menu2{
+    display: inline;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+}
+.menu2 .menue{
+    width: 100%;
+    margin-bottom: 20px;
+}
+footer{
+    background: #06131d;
+    width: 100%;
+    height: 400px;
+    padding: 0 0 0px 50px;
+}
+.navbar2{
+    text-align: center;
+    margin-left:0;
+}
+
+.navbar2 a{
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: .5s;
+    text-align: center;
+}
+}
+
+
+@media screen and (max-width:710px) {
+    .header{
+      display: block;
+      width: 100%;
+      padding: 5px 5px ;
+      background: transparent;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+}
+.mon-logo{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.menu-navbar{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 10px;
+    place-content: center;
+    text-align: center;
+}
+.navbar a{
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.menu2 p{
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+}
+@media screen and (max-width:430px) {
+    .header{
+      display: block;
+      width: 100%;
+      padding: 5px 5px ;
+      background: transparent;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+}
+.mon-logo{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.menu-navbar{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    font-size: 10px;
+    place-content: center;
+    text-align: center;
+}
+.navbar a{
+    font-size: 15px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+}
+}
+
+
